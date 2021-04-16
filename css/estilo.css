@@ -44,6 +44,10 @@ header {
     height: 100%;
 }
 
+.btn_menu {
+    display: none;
+}
+
 .fundo_banner {
     width: 100%;
 }
@@ -143,14 +147,13 @@ hr {
 
 .info {
     background-image: url(../img/imagem-fundo-info.png);
-    height: 194px;
 }
 
 .container_info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 194px;
 }
 
 .info h2 {
@@ -242,6 +245,32 @@ footer span{
          width: 80vw;
      }
 
+     .btn_menu {
+         display: inline-block;
+     }
+
+     .btn_menu i {
+         color: #fff;
+         font-size: 35px;
+     }
+
+     .nav_header {
+         display: none;
+         position: absolute;
+         background-color: black;
+         flex-direction: column;
+         height: 300px;
+         width: 100%;
+         top: 60px;
+         left: 0;
+         justify-content: space-evenly;
+     }
+
+     .container_header {
+         justify-content: flex-start;
+         align-items: center;
+     }
+
      .container_banner {
          display: flex;
          justify-content: center;
@@ -261,7 +290,8 @@ footer span{
 
     .fundo_banner{
         height: 100%;
-        width: auto;
+        width: 100%;
+        object-fit: cover;
     }
 
     h1 {
@@ -312,4 +342,39 @@ footer span{
         padding-bottom: 50px;
     }
 
+    .container_info {
+        flex-direction: column;
+        height: 600px;
+        justify-content: space-evenly;
+    }
+
+    .endereco h2 {
+        width: unset;
+    }
+
+    .img_mapa {
+        position: unset;
+        width: 80vw;
+        margin-bottom: 45px;
+    }
+    
+    .box_endereco {
+        width: 80vw;
+        height: unset;
+        padding: 60px 40px;
+    }
+
+    .endereco p {
+        margin-left: 0;
+    }
+
+    .endereco {
+        height: 800px;
+        justify-content: space-evenly;
+    }
+
+    footer span {
+        width: 80vw;
+        text-align: center;
+    }
 }   

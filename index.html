@@ -6,22 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lading-Page Enzzo</title>
+    <script src="https://kit.fontawesome.com/8f00cf3812.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
     <header>
         <div class="container container_header">
-            <nav class="nav_header">
-                <a href="#container_inicio">inicio</a>
-                <a href="#container_sobre">sobre</a>
-                <a href="#container_desafios">desafios</a>
-                <a href="#container_endereco">endereço</a>
+            <nav id="links" class="nav_header">
+                <a href="#container_inicio" onclick="botaodoMenu()">inicio</a>
+                <a href="#container_sobre" onclick="botaodoMenu()">sobre</a>
+                <a href="#container_desafios" onclick="botaodoMenu()">desafios</a>
+                <a href="#container_endereco" onclick="botaodoMenu()">endereço</a>
             </nav>
+            <a class="btn_menu" href="javascript:void(0)" onclick="botaodoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
     </header>
 
-    <main>
+    <main onclick="botaodoMenu()">
         <section id="container_inicio" class="container_banner">
             <img class="fundo_banner" src="img/imagem-fundo-banner.png" alt="banner">
             <div class="box_cont_banner">
@@ -98,6 +102,22 @@
         <span>Copyright © 2020 - Escola Senai de Informática</span>
 
     </footer>
+
+    <script>
+        function botaodoMenu() {
+            var menu = document.getElementById("links");
+            if (screen.width <=420) {
+                if (menu.style.display === "flex") {
+                // Esconder o menu
+                menu.style.display = "none";
+            }
+            else {
+                // Mostra menu
+                menu.style.display = "flex";
+            }
+            }
+        }
+    </script>
 
 </body>
 
